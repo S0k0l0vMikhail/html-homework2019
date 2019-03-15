@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Клиническое исследование таблетосов</title>
+</head>
+<body>
+	<!-- формы-->
+	<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset> <!-- атр disabled и readonly-->
+			<legend>Ваши регистрационные данные</legend>
+      <fieldset>
+        <legend>Контактная информация</legend>
+        <p>
+          <label for="phone">Номер телефона: </label>
+          <input type="tel" id="phone" placeholder="Телефон"  pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="6" maxlength="18" required />
+  			</p>
+        <p>
+          <label for="surname">Фамилия: </label>
+          <input id="surname" min="2" max="20" required>
+        </p>
+        <p>
+          <label for="name">Имя: </label>
+          <input id="name" min="2" max="20" required>
+        </p>
+        <p>
+          <label for="patronymic">Отчество: </label>
+          <input id="patronymic" min="2" max="20" required>
+        </p>
+      </fieldset>
+			<fieldset>
+        <legend>Данные паспорта:</legend>
+      <p>
+				<p>Кем выдан:</p> <br><!--однострочное текстовое поле-->
+        <textarea cols="30" rows="7" placeholder="Кем выдан" required></textarea>
+      </p>
+      <p>
+        <label for="date">Дата выдачи: </label>
+        <input id="date" min="2012-12-12" type="date" required>
+      </p>
+      <p>
+				<label for="number-id">Серия и номер: </label>
+				<input id="number-id" type="tel" placeholder=""  pattern="[0-9]{10}" required>
+      </p>
+      <p>
+				<label for="number">Возраст: <label/>
+				<input id="number" type="number" min="18" max="54" step="1">
+			</p>
+      <label>Ваш пол:</label>
+      <p>
+        <label><input name="answer" type="radio">Муж</label>
+        <label><input name="answer" type="radio">Жен</label>
+        <label><input name="answer" type="radio">Другое</label>
+      </p>
+      <fieldset> <!-- атр disabled-->
+  			<legend>Прикрепите сканы паспорта</legend>
+  			<p>
+  				<input type="file" multiple accept="image/*">
+  			</p>
+  		</fieldset>
+    </fieldset>
+      <fieldset>
+        <legend>Расскажите о себе</legend>
+        <p>
+        <label for="range">На сколько сильно вы боитесь смерти? <label/>
+          <p>
+        Не боюсь  <input id="range" type="range" min="2" max="90" value="6">  Адски страшно
+      </p>
+        </p>
+        <fieldset>
+  				<label>Чего вы ожидаете от исследования? (Можно выбрать несколько вариантов)</label>
+  				<p>
+  					<label><input name="answer2[]" type="checkbox">Денег</label><br> <!--[] массив, после можно достать по ключу name-->
+  					<label><input name="answer2[]" type="checkbox">Лечения</label><br>
+  					<label><input name="answer2[]" type="checkbox">Приключений</label><br>
+            <label><input name="answer2[]" type="checkbox">Новых знакомств</label>
+  				</p>
+  			</fieldset><br>
+        <fieldset>
+  				<label>Цвет вашей кожи?</label>
+  				<p>
+  					<input type="color">
+  				</p>
+  			</fieldset>
+        <fieldset>
+  				<legend>Выберите исследование в которых хотите принять участие</legend>
+  				<p>
+  					<select name="select" required> <!--size="2"-->
+  						<optgroup label="Гормональные препараты">
+  							<option value="1">Элем 1</option>
+  							<option value="2">Элем 2</option>
+  						</optgroup>
+  						<optgroup label="Онкологические препараты">
+  							<option value="1">Элем 1</option>
+  							<option value="2">Элем 2</option>
+  						</optgroup>
+  					</select>
+  				</p>
+  			</fieldset>
+      </fieldset>
+      <fieldset>
+				<p>
+					<button value="some_value" name="submit_btn" type="submit">Отправить данные</button>
+					<button type="reset">Очистка полей</button>
+				</p>
+			</fieldset>
+    </fieldset>
+</body>
+</html>
