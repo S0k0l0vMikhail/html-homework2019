@@ -1,0 +1,22 @@
+body {
+  background-image: url(../img/the-beatles.jpg);
+  background-size: cover;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.author {
+  background: gray;
+  width: 200px;
+}
+
+.link {
+  border: 1px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #000; 
+}
