@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Теги форм</title>
+</head>
+<body>
+	<!-- формы-->
+	<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset> <!-- атр disabled и readonly-->
+			<legend>Текстовые поля</legend>
+			<p>
+				<input type="text" value="text" pattern=""> <br><!--однострочное текстовое поле-->
+				<input type="email" required autofocus> <br>
+				<input type="password" placeholder="Подсказка" minlength="2" maxlength="9"> <br>
+				<input type="search"> <br>
+				<input type="submit" value="Отправить">
+			</p>
+		</fieldset>
+		
+		<fieldset> <!-- атр disabled-->
+			<legend>Загрузка файлов</legend>
+			<p>
+				<input type="file" multiple accept="image/*"> <!-- accept только импут с типом файл-->
+			</p>
+		</fieldset>
+		<fieldset> 
+			<legend>Поля для ввода чисел</legend>
+			<p>
+				<label for="number">Ввод чисел<label/>
+				<input id="number" type="number" min="2" max="10" step="2"> 
+			</p>
+			<p>
+				<label for="range">Ползунок<label/>
+				<input id="range" type="range" min="2" max="90" value="6"> 
+			</p>
+		</fieldset>
+		<fieldset>
+			<legend>Чекбоксы и радиокнопки</legend>
+			<p><label>можно тут<input type="checkbox" checked>а можно тут</label></p><!--checked устанавливает флажек по умолчанию-->
+			<p><label><input type="radio">Радиокнопка</label></p>
+			<fieldset>
+				<label>Группы радиокнопок</label>
+				<p>
+					<label><input name="answer" type="radio">Да</label>
+					<label><input name="answer" type="radio">Нет</label>
+					<label><input name="answer" type="radio">Не знаю</label>
+				</p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<label>Группы Флажков</label>
+				<p>
+					<label><input name="answer2[]" type="checkbox">Вариант 1</label><br> <!--[] массив, после можно достать по ключу name-->
+					<label><input name="answer2[]" type="checkbox">Вариант 2</label><br>
+					<label><input name="answer2[]" type="checkbox">Вариант 3</label>
+				</p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<label>Дата время</label>
+				<p>
+					<label for="time">Время</label>
+					<input id="time" type="time" min="14:11">
+				</p>
+				<p>
+					<label for="date">Дата</label>
+					<input id="date" min="2012-12-12" type="date">
+				</p>
+				<p>
+					<label for="datetime">Дата и время</label>
+					<input id="datetime" type="datetime-local">
+				</p>
+				<p>
+					<label for="month">Месяц</label>
+					<input id="month" type="month">
+				</p>
+				<p>
+					<label for="week">Неделя</label>
+					<input id="week" type="week">
+				</p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<label>Цвета и скрытые поля</label>
+				<p>
+					<input type="color">
+				</p>
+				<p>
+					<label><input type="hidden">Скрытое поле</label>
+				</p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<label>Кнопки input</label>
+				<p>
+					<input type="submit" value="Отправить">
+				</p>
+				<p>
+					<input type="reset"value="reset">
+				</p>
+				<p>
+					<input type="button"value="Просто кнопка">
+				</p>
+				<p>
+					<input type="image" src="" alt="Альтернативный текст"><!--кнопка картинкой, делает то же что и submit-->
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Кнопки button</legend>
+				<p>
+					<button value="some_value" name="submit_btn" type="submit">Отправить данные</button>
+					<button type="reset">Очистка полей</button>
+					<button type="button">Просто кнопочка</button>
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Многострочные текстовые поля</legend>
+				<p>
+					<textarea cols="20" rows="10"></textarea><!-- доступны autofocus required placeholder min max wrap="hard/soft/off"(перенос текста)-->
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Раскрывающиеся списки</legend>
+				<p>
+					<select name="select" multiple required> <!--size="2"-->
+						<option value="1">Элем 1</option>
+						<option value="2">Элем 2</option>
+						<option selected value="3">Элем 3</option>
+						<option value="4">Элем 4</option>
+					</select>
+				</p>
+				<p>
+					<select name="select" multiple required> <!--size="2"-->
+						<optgroup label="Заголовок 1">
+							<option value="1">Элем 1</option>
+							<option value="2">Элем 2</option>
+						</optgroup>
+						<optgroup label="Заголовок 2">
+							<option value="1">Элем 1</option>
+							<option value="2">Элем 2</option>
+						</optgroup>
+					</select>
+				</p>
+			</fieldset>
+		</fieldset>
+	</form>
+	
+</body>
+</html>
