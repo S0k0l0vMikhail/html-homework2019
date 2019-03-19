@@ -1,0 +1,52 @@
+@import url("grid.css");
+
+.card {
+    border: 1px solid black;
+    height: 200px;
+    margin: 5px;
+}
+
+.cards {
+    margin-bottom: 30px;
+}
+
+.cardbig {
+  border: 1px solid black;
+  height: 684px;
+  margin: 5px;
+}
+
+.menu {
+  border: 1px solid black;
+  height: 75px;
+  margin: 5px;
+  list-style: none;
+  float: left;
+}
+
+.slider {
+  border: 1px solid black;
+  height: 75px;
+  margin: 5px;
+  list-style-type: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.text{
+    position: absolute;
+    background: red;
+    left: 50px;
+    top: 125px;
+}
+.text2{
+    position: absolute;
+    left: 100px;
+    top: 125px;
+}
